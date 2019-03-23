@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-##To Run This Project
+## To Run This Project
 
 cd into the project folder , then run 'npm install' command then run 'ng serve' command
 
