@@ -1,0 +1,30 @@
+<div class="container">
+  <!-- <h1 class="text text-center">Job Search App</h1> -->
+  <!-- <app-search-bar></app-search-bar> -->
+  <div class="card  mt-5">
+    <div class="card-body">
+      <h4 class="card-title">Job Search</h4>
+    <form class="card-text row" style="align-items: center" (ngSubmit)="getJobList()"  #jobForm="ngForm">
+        <div class="form-group col">
+            <label for="">Location</label>
+            <select class="form-control" name="selectedLocation" id=""  [(ngModel)]="selectedLocation" >
+              <option *ngFor="let loc of locations" value={{loc}}>{{loc}}</option>
+            </select>
+          </div>
+          <div class="form-group col">
+              <label for="">Experience</label>
+              <select class="form-control" name="selectedExperience" id="" [(ngModel)]="selectedExperience"  >
+                <option *ngFor="let exp of experience" value={{exp}}> {{exp}}</option>
+            
+              </select>
+            </div>
+   <div class="col">
+      <button type="submit" name="" id="" class="btn btn-primary btn-lg btn-block" style="margin:auto;width:50%"> Search </button>
+   </div>
+      </form>
+    </div>
+  </div>
+  
+  
+  <app-job-list [jobs]='jobs' ></app-job-list>
+</div>

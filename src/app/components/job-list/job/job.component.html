@@ -1,0 +1,24 @@
+<li class="list-group-item">
+ <div class="container">
+     <div class="row">
+         <div class="col-4">
+           <h4>{{job.title}}</h4>
+         </div>
+         <div class="col-4">
+            {{job.experience || 'Fresher'}}
+         </div>
+         <div class="col-4">
+            <button ><a href={{job.applylink}}> Apply Here</a></button>
+         </div>
+     </div>
+     <div class="row">
+         <div class="col-4"> Start Date ({{job.startdate || 'Not Specified' }})</div>
+         <div class="col-4">End Date ({{job.enddate  || 'Not Specified'}})</div>
+         <div class="col-4"> Salary ({{job.salary  || 'Not Specified'}})</div>
+     </div>
+     <div class="row">
+            <div class="col-4" ><b> Location :  ({{job.location || 'Not Specified' }})</b></div>
+        </div>
+ </div>
+
+</li>

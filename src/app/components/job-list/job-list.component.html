@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="">Search</label>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="form-control"
+              placeholder=""
+              aria-describedby="helpId"
+            />
+            <small id="helpId" class="text-muted">Help text</small>
+          </div>
+        </div>
+        <div class="col" style="align-items: center">
+          <button type="button" class="btn btn-primary m-3 pull-right" (click)="sortJobsList('location')">
+            Sort By Location
+          </button>
+          <button type="button" class="btn btn-primary m-3 pull-right" (click)="sortJobsList('experience')">
+            Sort By Experience
+          </button>
+        </div>
+      </div>
+      <ul class="list-group">
+        <div *ngFor="let job of jobs">
+          <app-job [job]="job"></app-job>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
